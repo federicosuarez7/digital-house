@@ -30,6 +30,7 @@
         </article>
     </section>
     <!-- Tablas -->
+    <hr>
     <section>
         <!-- Etiqueta de tabla -->
         <table> 
@@ -63,6 +64,7 @@
         
     </section>
     <!-- Enlaces -->
+    <hr>
     <section>
         <!-- Link con url absoluta -->
         <a href="https://www.diariouno.com.ar/" target="_blank">Ir a Diario Uno</a>
@@ -71,6 +73,7 @@
         <a href="Carpeta interna/interno.html" target="_blank" >Vamos al archivo interno</a>
     </section>
     <!-- Listas -->
+    <hr>
     <section>
         <h2>Listas desordenadas (ul)</h2>
         <ul>
@@ -84,6 +87,38 @@
             <li>Item b</li>
             <li>Item c</li>
         </ol>
+    </section>
+    <!-- Formularios -->
+    <hr>
+    <section>
+        <h2>Formulario de contacto</h2>
+        <form action="">
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre aqui">
+            <br><br>
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" placeholder="Escribe tu contraseña">
+            <br><br>
+            <label for="genero">Género:</label>
+            <input type="radio" name="genero" value="varon">Varón
+            <input type="radio" name="genero" value="mujer">Mujer
+            <input type="radio" name="genero" value="otro">Otro
+            <br><br>
+            <label for="pais">País de nacimiento: </label>
+            <select name="pais">
+                <option value="ar">Argentina</option>
+                <option value="col">Colombia</option>
+                <option value="pe">Peru</option>
+            </select>
+            <br><br>
+            <label for="comentario">Comentarios: </label>
+            <br><br>
+            <textarea name="comentario" cols="30" rows="6">Deja aqui tus comentarios</textarea>
+            <br><br>
+            <button type="submit">Enviar</button>
+
+
+        </form>
     </section>
     <footer>
         <nav>
