@@ -94,10 +94,16 @@
         <h2>Formulario de contacto</h2>
         <form action="">
             <label for="nombre">Nombre: </label>
-            <input type="text" name="nombre" placeholder="Escribe tu nombre aqui">
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre aqui" required autofocus>
             <br><br>
             <label for="pass">Contraseña</label>
-            <input type="password" name="pass" placeholder="Escribe tu contraseña">
+            <input type="password" name="pass" id="pass" placeholder="Escribe tu contraseña">
+            <br><br>
+            <label for="fecha">Ingresa tu fecha de nacimiento</label>
+            <input type="date" name="fecha" id="fecha">
+            <br><br>
+            <label for="archivo">Selecciona un archivo:</label>
+            <input type="file" name="archivo" id="archivo">
             <br><br>
             <label for="genero">Género:</label>
             <input type="radio" name="genero" value="varon">Varón
