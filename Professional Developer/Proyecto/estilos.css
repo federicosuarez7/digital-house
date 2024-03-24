@@ -8,3 +8,34 @@ h1{
 #celeste{
     background-color: aqua;
 }
+/* Estilos para texto */
+/* Color */
+.color-titulo{
+    color: blueviolet;
+}
+/* Alineacion */
+.alinear{
+    text-align: center;
+}
+/* Subrayado */
+.subrayar{
+    text-decoration:underline dashed;
+}
+/* Mayusculas-Minusculas-Capitalize */
+.mayuscula{
+    text-transform: uppercase;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+/* Espaciado del texto */
+.espaciado-texto{
+    /* Sangria */
+    text-indent: 20px;
+    /* Espaciado entre las letras */
+    letter-spacing: 2px;
+    /* Espacio vertical entre las oraciones */
+    line-height: 1.9;
+    /* Espaciado entre palabras */
+    word-spacing: 4px;
+}
