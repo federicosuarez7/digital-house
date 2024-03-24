@@ -39,3 +39,6 @@ h1{
     /* Espaciado entre palabras */
     word-spacing: 4px;
 }
+.sombra{
+    text-shadow: 2px 2px 2px green;
+}
