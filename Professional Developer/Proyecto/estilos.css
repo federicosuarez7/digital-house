@@ -73,3 +73,7 @@ h1{
 .familia-fantasy{
     font-family:fantasy;
 }
+/* Fuentes de terceros (Google fonts) */
+.google-fonts{
+    font-family: "Workbench", sans-serif;
+}
