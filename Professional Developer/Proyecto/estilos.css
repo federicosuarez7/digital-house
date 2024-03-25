@@ -93,3 +93,26 @@ h1{
 .listas-disc{
     list-style-type: disc;
 }
+/* Estilos para tablas */
+table, th, td{
+    border: 1px solid black;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+    width: 80%;
+    margin: 10px;
+}
+tr:hover{
+background-color: aquamarine;
+}
+th, td{
+    padding: 10px;
+}
+th{
+    background-color: blueviolet;
+    height: 30px;
+}
+td{
+    height: 40px;
+}
