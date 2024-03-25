@@ -46,15 +46,30 @@ h1{
 .font-serif{
     font-family: serif;
 }
+.familia-serif{
+    font-family: 'Times New Roman', Times, serif;
+}
 .font-sans-serif{
     font-family: sans-serif;
+}
+.familia-sans-serif{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .font-monospace{
     font-family: monospace;
 }
+.familia-monospace{
+    font-family: 'Courier New', Courier, monospace;
+}
 .font-cursive{
     font-family: cursive;
 }
+.familia-cursiva{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .font-fantasy{
     font-family: fantasy;
+}
+.familia-fantasy{
+    font-family:fantasy;
 }
