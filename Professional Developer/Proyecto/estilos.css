@@ -1,6 +1,10 @@
+body{
+    background-color: yellow;
+}
 /* Comentarios en CSS */
 h1{
     color: blue;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkpUZd2k8pyVIX_fQuKnF1iTPctsLt8GkQZg&usqp=CAU);
 }
 .center{
     text-align: center;
