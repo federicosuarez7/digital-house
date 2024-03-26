@@ -138,6 +138,8 @@ td{
     width: 100px;
     height: 200px;
     border-style: inset;
+    margin-top: 40px;
+    margin-left: 50px;
 }
 .caja3{
     background-color: black;
