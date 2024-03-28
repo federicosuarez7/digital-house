@@ -210,3 +210,10 @@ td{
     width: 500px;
     background-color: azure;
 }
+/* Display:none vs  visibility:hidden */
+.none{
+    display: none;
+}
+.hidden{
+    visibility: hidden;
+}
