@@ -258,6 +258,10 @@ td{
     overflow: auto;
     
 }
+/* Float */
+.float{
+    float: right;
+}
 .footer{
     margin-top: 199px;
 }
