@@ -217,3 +217,21 @@ td{
 .hidden{
     visibility: hidden;
 }
+/* Position */
+.div-position{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    max-width: 80%;
+}
+.position{
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    word-spacing: 3px;
+}
+.p2{
+    position: relative;
+    top: 15px;
+    left: 15px;
+    color: red;
+}
