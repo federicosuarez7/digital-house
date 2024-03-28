@@ -235,3 +235,17 @@ td{
     left: 15px;
     color: red;
 }
+/* z-index */
+.div-index{
+    background-color: black;
+}
+.tit{
+    color: white;
+}
+.z-index{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    width: 100%;
+}
