@@ -197,3 +197,16 @@ td{
     height: 100px;
     padding: 15px;
 }
+/* Width y max-width */
+.max{
+    margin: auto;
+    border: 2px solid black;
+    max-width: 500px;
+    background-color: azure;
+}
+.width{
+    margin: auto;
+    border: 2px solid black;
+    width: 500px;
+    background-color: azure;
+}
