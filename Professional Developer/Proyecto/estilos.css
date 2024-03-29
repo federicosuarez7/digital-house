@@ -262,6 +262,12 @@ td{
 .float{
     float: right;
 }
+/* Combinadores de seleccion */
+div>p{
+    background-color: aquamarine;
+}
+
+/* Footer */
 .footer{
     margin-top: 199px;
 }
