@@ -262,11 +262,30 @@ td{
 .float{
     float: right;
 }
-/* Combinadores de seleccion */
+/* Combinadores de seleccion 
 div>p{
     background-color: aquamarine;
+}*/
+/* Pseudoclases */
+.pseudo{
+    color: chocolate;
 }
-
+a:visited{
+    color: blueviolet;
+}
+a:hover{
+    background-color: aqua;
+}
+a:active{
+    color: blue;
+}
+a.pseudo2:hover{
+    background-color: black;
+    color: white;
+}
+p.parr:first-child{
+    color: blueviolet;
+}
 /* Footer */
 .footer{
     margin-top: 199px;
