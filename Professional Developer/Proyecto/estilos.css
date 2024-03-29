@@ -286,6 +286,10 @@ a.pseudo2:hover{
 p.parr:first-child{
     color: blueviolet;
 }
+/* Pseudoelementos */
+p.pseudoelem::first-line{
+    color: green;
+}
 /* Footer */
 .footer{
     margin-top: 199px;
