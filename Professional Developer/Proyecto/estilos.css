@@ -1,4 +1,5 @@
 body{
+    font-size: 30px;
     background-color: rgb(243, 243, 162);
 }
 /* Comentarios en CSS */
@@ -290,6 +291,22 @@ p.parr:first-child{
 p.pseudoelem::first-line{
     color: green;
 }
+/* Unidades de medida */
+.titulo22{
+    font-size: 60px;
+}
+.parrafo22{
+    font-size: 1em;
+}
+.div22{
+    font-size: 15px;
+    border: 2px solid black;
+    background-color: rgb(196, 241, 151);
+}
+.span22{
+    font-size: 1.5em;
+}
+
 /* Footer */
 .footer{
     margin-top: 199px;
