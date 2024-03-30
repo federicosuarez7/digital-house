@@ -1,5 +1,4 @@
 body{
-    font-size: 30px;
     background-color: rgb(243, 243, 162);
 }
 /* Comentarios en CSS */
@@ -306,7 +305,23 @@ p.pseudoelem::first-line{
 .span22{
     font-size: 1.5em;
 }
-
+/* Flexbox */
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+.flex-container>div{
+    background-color: rgb(194, 157, 230);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    margin: 10px;
+}
 /* Footer */
 .footer{
     margin-top: 199px;
