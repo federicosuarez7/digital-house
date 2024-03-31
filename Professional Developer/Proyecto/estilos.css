@@ -322,6 +322,38 @@ p.pseudoelem::first-line{
     font-size: 30px;
     margin: 10px;
 }
+/* Grid */
+.grid-container{
+    display: grid;
+    /* Creamos las columnas */
+    grid-template-columns: auto auto auto;
+    background-color: rgb(40, 223, 223);
+    border: 2px solid black;
+    padding: 10px;
+    /* Espacio entre filas y columnas */
+    gap: 5px;
+    justify-content: center;
+
+}
+
+.grid-item{
+    background-color: yellowgreen;
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    
+}
+/* 
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+    grid-row-start: 1;
+    grid-row-end:3 ;
+} */
+
+
 /* Footer */
 .footer{
     margin-top: 199px;
