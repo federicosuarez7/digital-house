@@ -401,7 +401,41 @@ div.transiciones:hover{
     width: 600px;
     transform: rotate(90deg);
 }
-
+/* Animaciones */
+.animacion{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    animation-name: test;
+    animation-duration: 8s;
+}
+@keyframes test{
+    from{
+        background-color: black;
+    }
+    to{
+        background-color: white;
+    }
+}
+.anim2{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin-top: 20px;
+    animation-name: test2;
+    animation-duration: 8s;
+}
+@keyframes test2{
+    0%{
+        background-color: aqua;
+    }
+    40%{
+        background-color: yellowgreen;
+    }
+    100%{
+        background-color: blueviolet;
+    }
+}
 /* Footer */
 .footer{
     margin-top: 199px;
