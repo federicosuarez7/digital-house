@@ -390,8 +390,17 @@ p.pseudoelem::first-line{
         gap: 2px;
     }
 }
-
-
+/* Transiciones */
+.transiciones{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 2s, transform 2s;
+}
+div.transiciones:hover{
+    width: 600px;
+    transform: rotate(90deg);
+}
 
 /* Footer */
 .footer{
