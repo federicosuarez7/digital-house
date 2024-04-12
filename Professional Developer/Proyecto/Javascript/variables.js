@@ -9,3 +9,9 @@ let var_undefined = undefined;
 //Como imprimir en consola
 console.log(var_string);
 console.log("var_numeros");
+
+// Concatenacion e interpolacion
+let nombre = "Federico";
+let apellido = "Suarez";
+
+console.log(`Mi nombre completo es:${nombre} ${apellido}`);
