@@ -15,3 +15,17 @@ let nombre = "Federico";
 let apellido = "Suarez";
 
 console.log(`Mi nombre completo es:${nombre} ${apellido}`);
+// Funciones
+function saludar(){
+    console.log("Hola soy una funcion");
+}
+saludar();
+// Funciones con parametros
+function suma(num1,num2){
+    let resultado = num1 + num2;
+    console.log("El resultado es: "+resultado);
+}
+// num1 = 10;
+// num2 = 3;
+// suma(num1,num2);
+suma(8,1);
