@@ -37,3 +37,28 @@ for (let i = 0; i< mayorMenor.length; i++) {
     }  
 }
 console.log(`El menor valor del arreglo es: ${menor}`)
+// Metodos de arrays
+
+// push() Agrega al final del array un elemento
+let frutas = ["banana", "naranja", "melon"];
+frutas.push ("limon");
+console.log(frutas);
+// pop() Elimina el ultimo elemento del array
+frutas.pop();
+console.log(frutas);
+// shift() Elimina el primer elemento del array
+frutas.shift();
+console.log(frutas);
+// unshift() Agrega elementos al principio del array
+frutas.unshift("sandia","frutilla");
+console.log(frutas);
+// join()
+let frutasJuntas= frutas.join("-");
+console.log(frutasJuntas);
+// indexOf() Devuelve el valor de la posicion del elemento en el array
+let autos = ["ford","renault","chevrolet"];
+console.log(autos.indexOf("chevrolet"));
+console.log(autos.indexOf("honda"));
+// lastIndexOf() Busca de atras hacia adelante
+// includes() Devuelve un boolean si encuentra
+console.log(autos.includes("ford"));
