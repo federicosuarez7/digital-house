@@ -24,3 +24,32 @@ console.log(palabras);
 let edades = [25,18,30,15,22];
 let mayorEdad = edades.find(edad => edad>=18);
 console.log(mayorEdad);
+//.map(callback)
+// Lo que hace es recibir una funcion por parametro (callback)
+// Recorre el arreglo y devuelve uno nuevo segun lo que indique la funcion
+let numeros = [2,4,6];
+let numerosMultiplicados = numeros.map(function(num){
+    return num * 2;
+});
+console.log(numerosMultiplicados);
+// .filter(callback)
+// Tambien recibe una funcion por parametro (callback)
+// recorre todo el array y filtra los elementos segun la condicion del callback
+let edades10 = [22,8,17,14,30];
+let edadesMayores = edades10.filter(function(edad){
+    return edad > 18;
+});
+console.log(edadesMayores);
+// .reduce(callback)
+// Recorre todo el array nos devuelve solo un valor unico
+let nums = [5,7,16];
+let suma = nums.reduce(function(acumulador,num){
+    return acumulador+num;
+});
+console.log(suma);
+// forEach(callback)
+// itera sobre un array igual que el for
+let paises = ["Argentina","Colombia","Brasil"];
+paises.forEach(function(pais){
+    
+})
