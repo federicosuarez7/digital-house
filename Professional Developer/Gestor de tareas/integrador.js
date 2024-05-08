@@ -1,13 +1,27 @@
-// const prompt = require("prompt-sync")({sigint:true});
-
 // Array para almacenar todas las tareas
 let tareas = [];
-
+let categoriasNombres = [
+    "trabajo","Personal",
+    // Agregar mas categorias segun sea necesario
+];
+// funcion que muestra todas las categorias
+function mostrarCategorias() {
+    console.log("Categorias existentes: ");
+    categoriasNombres.forEach(function(categoria,indice) {
+        console.log(indice + ": " + categoria)
+    });
+}
+// Funcion que sirve para cargar nuevas categorias por el usuario
+function agregarNuevaCategoria(nombreCategoria) {
+    categoriasNombres.push(nombreCategoria);
+    console.log("Categoría "+nombreCategoria+ "agregada correctamente!!");
+}
 // Funcion para agregar nuevas tareas al array tareas
 function agregarTarea(nombreTarea,fechaIngresada=null){
     tareas.push({nombre:nombreTarea,
                  completada: false,     
                  fechaLimite: fechaIngresada});
+    console.log("Tarea agregada con éxito!!!!");
 }
 
 // Funcion para eliminar una tarea
@@ -51,7 +65,9 @@ function mostrarMenuPrincipal() {
     console.log(" 3. Marcar tarea como completada");
     console.log(" 4. Modificar una tarea");
     console.log(" 5. Mostrar todas las tareas");
-    console.log(" 6. Salir");
+    console.log(" 6. Mostrar todas las categorias");
+    console.log(" 7. Agregar nueva categoria");
+    console.log(" 0. Salir");
 }
 
 // Funcion para interactuar con el usuario
@@ -61,6 +77,9 @@ function interactuarUsuario() {
         mostrarMenuPrincipal();
         opcion = parseInt(prompt("Ingrese la opcion deseada: "));
         switch (opcion) {
+            case 0:
+                console.log("Saliendo del programa...........");
+                break;
             case 1:
                 let nombreTarea = prompt("Ingrese el nombre de la tarea: ");
                 agregarTarea(nombreTarea);
@@ -81,6 +100,13 @@ function interactuarUsuario() {
             case 5:
                 console.log(" -----Lista de tareas----- ");
                 console.log(tareas);
+                break;
+            case 6:
+                mostrarCategorias();
+                break;
+            case 7:
+                let nuevaCategoria =prompt("Ingrese el nombre de la nueva categoría: ");
+                agregarNuevaCategoria(nuevaCategoria);
                 break;
             default: 
             console.log("Opcion invalida");
