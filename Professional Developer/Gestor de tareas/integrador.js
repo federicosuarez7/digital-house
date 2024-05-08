@@ -14,14 +14,22 @@ function mostrarCategorias() {
 // Funcion que sirve para cargar nuevas categorias por el usuario
 function agregarNuevaCategoria(nombreCategoria) {
     categoriasNombres.push(nombreCategoria);
-    console.log("Categoría "+nombreCategoria+ "agregada correctamente!!");
+    console.log("Categoría "+nombreCategoria+ " agregada correctamente!!");
 }
 // Funcion para agregar nuevas tareas al array tareas
 function agregarTarea(nombreTarea,fechaIngresada=null){
-    tareas.push({nombre:nombreTarea,
-                 completada: false,     
-                 fechaLimite: fechaIngresada});
-    console.log("Tarea agregada con éxito!!!!");
+    mostrarCategorias();
+    let numeroCategoria = parseInt(prompt("Ingrese el numero de la categoría para asignar la tarea:"));
+    if(numeroCategoria>=0 && numeroCategoria < categoriasNombres.length){
+        tareas.push({categoria:numeroCategoria,
+            nombre:nombreTarea,
+            completada: false,     
+            fechaLimite: fechaIngresada});
+        console.log("Tarea agregada con éxito!!!!");
+    }else{
+        console.log("Numero de categoria incorrecto");
+    }
+    
 }
 
 // Funcion para eliminar una tarea
@@ -45,12 +53,11 @@ function tareaCompletada(indice) {
 }
 
 // Funcion para modificar una tarea
-function modificarTarea(indice,nombreTarea,fechaIngresada = null) {
+function modificarTarea(indice,nombreTarea,numcategoria,fechaIngresada = null) {
     if (indice>=0 && indice<tareas.length) {
-        tareas[indice].nombre = nombreTarea;
-        if (fechaIngresada != null) {
-            tareas[indice].fechaLimite = fechaIngresada;
-        }
+        tareas[indice].nombre = nombreTarea !== undefined ? nombreTarea : tareas[indice].nombre;
+        tareas[indice].categoria = numcategoria !== undefined ? numcategoria: tareas[indice].categoria;
+        tareas[indice].fechaLimite = fechaIngresada !== undefined ? fechaIngresada : tareas[indice].fechaLimite;
         console.log("Tarea modificada con éxito");
     }else{
         console.log("No se ha modificado la tarea, índice inválido");
@@ -94,8 +101,39 @@ function interactuarUsuario() {
                 break;
             case 4:
                 let indiceTareaModificar = parseInt(prompt("Indique el indice de la tarea a modificar: "));
-                let nombreTareaModificar = prompt("Indique el nombre nuevo de la tarea: ");
-                modificarTarea(indiceTareaModificar,nombreTareaModificar);
+                if(indiceTareaModificar >=0 && indiceTareaModificar < tareas.length){
+                    console.log("Menu para modificar una tarea, indique la opcion deseada:");
+                    console.log("1. Modificar nombre tarea");
+                    console.log("2. Modificar categoria de la tarea");
+                    console.log("3. Modificar fecha límite");
+                    let ingresoUsuario = parseInt();
+                    switch (ingresoUsuario) {
+                        case 1:
+                            let nuevoNombreTarea = prompt("Ingrese el nuevo nombre de su tarea: ");
+                            modificarTarea(indice,nuevoNombreTarea)
+                            break;
+                        case 2:
+                            let cambioCategoria = parseInt(prompt("Ingrese el numero de la categoria para asignarla a la tarea: "));
+                            if(cambioCategoria>=0 && cambioCategoria<categoriasNombres.length){
+                                modificarTarea(indice,undefined,cambioCategoria);
+                            }else{
+                                console.log("Opcion ingresada invalida");
+                            }
+                            
+                            break;
+                        case 3:
+                            let nuevaFecha = prompt("Ingrese la nueva fecha limite de la tarea: ");
+                            modificarTarea(indice,undefined,undefined,nuevaFecha);
+                            break;
+                    
+                        default:
+                            console.log("Opcion ingresada incorrecta");
+                            break;
+                    }
+                }else{
+                    console.log("Indice de tarea incorrecto!!!!");
+                }
+                
                 break;
             case 5:
                 console.log(" -----Lista de tareas----- ");
