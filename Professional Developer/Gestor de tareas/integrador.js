@@ -64,6 +64,20 @@ function modificarTarea(indice,nombreTarea,numcategoria,fechaIngresada = null) {
     }
 }
 
+// Funcion para filtrar categorias de tareas
+function filtrarTareasPorCategoria(numeroCategoria) {
+    let tareasFiltradas = tareas.filter(function(tarea){
+        return tarea.categoria === numeroCategoria;
+    });
+    return tareasFiltradas;
+}
+// Funcion para mostrar la cantidad de tareas completadas
+function contadorTareasCompletadasPorCategorias(numeroCategoria) {
+    let tareasCategoria = filtrarTareasPorCategoria(numeroCategoria);
+    let tareasCompletadas = tareasCategoria.reduce(function(contador,tarea){
+        return tarea.completada ? contador ++ : contador;
+    },0);
+}
 // Funcion para mostrar el menu de opciones
 function mostrarMenuPrincipal() {
     console.log(" -----Menu principal----- ");
@@ -74,6 +88,7 @@ function mostrarMenuPrincipal() {
     console.log(" 5. Mostrar todas las tareas");
     console.log(" 6. Mostrar todas las categorias");
     console.log(" 7. Agregar nueva categoria");
+    console.log("8. Filtrar tareas por categorías");
     console.log(" 0. Salir");
 }
 
@@ -146,6 +161,12 @@ function interactuarUsuario() {
                 let nuevaCategoria =prompt("Ingrese el nombre de la nueva categoría: ");
                 agregarNuevaCategoria(nuevaCategoria);
                 break;
+            case 8:
+                mostrarCategorias();
+                let numCategoriaFiltrar = parseInt(prompt("Ingrese el numero de la categoría a filtrar: "));
+                let tareasCategoria = filtrarTareasPorCategoria(numCategoriaFiltrar);
+                console.log("Tareas de la categoria seleccionada: ");
+                console.log(tareasCategoria);
             default: 
             console.log("Opcion invalida");
                 break;
