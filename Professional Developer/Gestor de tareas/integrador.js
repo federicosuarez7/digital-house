@@ -77,6 +77,8 @@ function contadorTareasCompletadasPorCategorias(numeroCategoria) {
     let tareasCompletadas = tareasCategoria.reduce(function(contador,tarea){
         return tarea.completada ? contador ++ : contador;
     },0);
+    let tareasEnTotal = tareasCategoria.length;
+    console.log("Tareas completadas de la categoria: "+ numeroCategoria+ ": "+tareasCompletadas+" de "+tareasEnTotal+ " tareas!!!!");
 }
 // Funcion para mostrar el menu de opciones
 function mostrarMenuPrincipal() {
@@ -89,6 +91,7 @@ function mostrarMenuPrincipal() {
     console.log(" 6. Mostrar todas las categorias");
     console.log(" 7. Agregar nueva categoria");
     console.log("8. Filtrar tareas por categorías");
+    console.log("9. ");
     console.log(" 0. Salir");
 }
 
@@ -167,6 +170,11 @@ function interactuarUsuario() {
                 let tareasCategoria = filtrarTareasPorCategoria(numCategoriaFiltrar);
                 console.log("Tareas de la categoria seleccionada: ");
                 console.log(tareasCategoria);
+            case 9:
+                mostrarCategorias();
+                let nroCategoria = parseInt(prompt("Ingrese el numero de la categoria a visualizar: "));
+                contadorTareasCompletadasPorCategorias(nroCategoria);
+                break;
             default: 
             console.log("Opcion invalida");
                 break;
