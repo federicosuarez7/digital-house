@@ -1,4 +1,7 @@
-// Algoritmo para ordenamiento de datos
+/* Algoritmo para ordenamiento de datos,lo que hace es comparar el primer elemento del array con su siguiente:
+Si el elemento siguiente es menor que el dato en la posicion 0 del array los cambia de lugar. Este proceso se repite hasta que el mayor valor del arreglo
+se coloca al final de la lista, y este proceso se vuelve a repetir tantas veces como valores tiene el arreglo.
+Siempre crear una variable para recibir el nuevo arreglo ordenado */
 // Ordenamos de menor a mayor
 let arreglo = [5,4,1,6,3,2];
 for (let j = 0; j< arreglo.length; j++) {
