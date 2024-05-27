@@ -117,6 +117,24 @@ function ordenarTareasPorFechaLimite() {
         }
     }
 }
+// Funcion que busca tareas por su nombre y retorna su posicion 
+// Usando busqueda binaria
+function buscarTareasPorNombre(nombreTarea) {
+    let limiteInicio = 0;
+    let limiteFinal = tareas.length -1;
+    while (limiteInicio<=limiteFinal) {
+        let elementoMedio = Math.round((limiteInicio+limiteFinal)/2);
+        if (tareas[elementoMedio]===nombreTarea) {
+             return elementoMedio;
+        }else if(tareas[elementoMedio].nombre<nombreTarea){
+            limiteInicio = elementoMedio + 1;
+        }else {
+            limiteFinal = elementoMedio - 1;
+        }
+    }
+    // Si el elemento no esta en el arreglo devolvera este valor
+    return -1;
+}
 // Funcion para mostrar el menu de opciones
 function mostrarMenuPrincipal() {
     console.log(" -----Menu principal----- ");
@@ -132,6 +150,7 @@ function mostrarMenuPrincipal() {
     console.log("10. Visualizar todas las tareas no completadas");
     console.log("11. Ordenar las tareas alfabeticamente");
     console.log("12. Ordenar las tareas por fecha limite");
+    console.log("13. Buscar tarea por su nombre");
     console.log(" 0. Salir");
 }
 
@@ -229,6 +248,17 @@ function interactuarUsuario() {
                 ordenarTareasPorFechaLimite();
                 console.log("Tareas por fecha");
                 console.log(tareas);
+                break;
+            case 13:
+                ordenarTareasPorNombres();
+                let nombreABuscar = prompt("Ingrese el nombre de la tarea a buscar: ");
+                let indiceTarea = buscarTareasPorNombre(nombreABuscar);
+                if (indiceTarea!==-1) {
+                    console.log("Tarea encontrada en posicion: "+indiceTarea);
+                }else{
+                    console.log("Tarea no encontrada");
+                }
+                
                 break;
             default: 
             console.log("Opcion invalida");
