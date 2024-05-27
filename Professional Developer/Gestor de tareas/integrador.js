@@ -90,21 +90,52 @@ function mostrarTareasNoCompletadas() {
     });
 
 }
+// Funcion para ordenar tareas por la propiedad 'nombre' utilizando
+// bubbleSort
+function ordenarTareasPorNombres() {
+    let temporal;
+    for (let j = 0; j < tareas.length; j++) {
+        for (let i = 0; i < tareas.length - 1; i++) {
+            if (tareas[i].nombre>tareas[i+1].nombre) {
+                temporal =tareas[i];
+                tareas[i] = tareas[i+1];
+                tareas[i+1] = temporal;
+            }
+        }
+    }
+}
+// Funcion para ordenar por fecha 
+function ordenarTareasPorFechaLimite() {
+    let temporal;
+    for (let j = 0; j < tareas.length; j++) {
+        for (let i = 0; i < tareas.length - 1; i++) {
+            if (tareas[i].fechaLimite>tareas[i+1].fechaLimite) {
+                temporal =tareas[i];
+                tareas[i] = tareas[i+1];
+                tareas[i+1] = temporal;
+            }
+        }
+    }
+}
 // Funcion para mostrar el menu de opciones
 function mostrarMenuPrincipal() {
     console.log(" -----Menu principal----- ");
-    console.log(" 1. Agregar tarea");
-    console.log(" 2. Eliminar tarea");
-    console.log(" 3. Marcar tarea como completada");
-    console.log(" 4. Modificar una tarea");
-    console.log(" 5. Mostrar todas las tareas");
-    console.log(" 6. Mostrar todas las categorias");
-    console.log(" 7. Agregar nueva categoria");
+    console.log("1. Agregar tarea");
+    console.log("2. Eliminar tarea");
+    console.log("3. Marcar tarea como completada");
+    console.log("4. Modificar una tarea");
+    console.log("5. Mostrar todas las tareas");
+    console.log("6. Mostrar todas las categorias");
+    console.log("7. Agregar nueva categoria");
     console.log("8. Filtrar tareas por categorías");
     console.log("9. Visualizar cantidad de tareas completadas por categoria");
     console.log("10. Visualizar todas las tareas no completadas");
+    console.log("11. Ordenar las tareas alfabeticamente");
+    console.log("12. Ordenar las tareas por fecha limite");
     console.log(" 0. Salir");
 }
+
+
 
 // Funcion para interactuar con el usuario
 function interactuarUsuario() {
@@ -189,13 +220,20 @@ function interactuarUsuario() {
             case 10:
                 mostrarTareasNoCompletadas();
                 break;
+            case 11:
+                ordenarTareasPorNombres();
+                console.log("Tareas por nombre");
+                console.log(tareas);
+                break;
+            case 12:
+                ordenarTareasPorFechaLimite();
+                console.log("Tareas por fecha");
+                console.log(tareas);
+                break;
             default: 
             console.log("Opcion invalida");
                 break;
         }
     }
 }
-
-
-
 interactuarUsuario();
