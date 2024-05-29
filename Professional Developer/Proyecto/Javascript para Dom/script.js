@@ -1,0 +1,1 @@
+window.alert("Curso de Javascript para Dom");
