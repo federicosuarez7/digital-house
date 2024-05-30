@@ -11,3 +11,11 @@ for(let i=0; i<form.length;i++){
 }
 
 document.getElementById('test2').innerHTML = text;
+
+// Eventos
+// Declarative function
+function changeThisElement(element) {
+    element.innerHTML = "Saludando desde funcion declarativa";
+}
+// Arrow function
+const changeThisElement2 = (element) => element.innerHTML = "Saludando desde funcion flecha";
