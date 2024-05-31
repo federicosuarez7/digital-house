@@ -19,3 +19,26 @@ function changeThisElement(element) {
 }
 // Arrow function
 const changeThisElement2 = (element) => element.innerHTML = "Saludando desde funcion flecha";
+
+
+const displayDate = () => document.getElementById('test3').innerHTML = Date();
+// No abro y cierro parentesis porque quiero que se ejecute cuando se de la accion
+document.getElementById('btn').onclick = displayDate
+
+const checkCookies = () => {
+    let text = navigator.cookieEnabled ? 'Las cookies estan habilitadas' : 'Las cookies no estan habilitadas';
+    document.getElementById('test4').innerHTML = text;
+}
+
+const upperCase = () => {
+    const input = document.getElementById('apodo');
+    input.value = input.value.toUpperCase();
+}
+
+const mouseOver = (element) => {
+    element.innerHTML = 'Estas adentro de la caja';
+}
+const mouseOut = (element) => {
+    element.innerHTML = 'Estas fuera de la caja';
+
+}

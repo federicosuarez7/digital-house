@@ -6,22 +6,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body onload="checkCookies()">
     <h1 class="tituloPrincipal">Titulo principal</h1>
-
     <p class="saludos">¡Hola mundo!</p>
     <button onclick="changeThisElement(this)">Presiona aqui - Funcion Declarativa</button>
     <button onclick="changeThisElement2(this)">Presiona aqui - Funcion flecha</button>
-    
     <p id="test"></p>
-
     <form id="form1">
+        <label for="apodo">Apodo:</label>
+        <input type="text" id="apodo" oninput="upperCase()"><br><br>
         Nombre: <input type="text" name="nombre" value="Federico"><br><br>
         Apellido: <input type="text" name="nombre" value="Suarez"><br><br>
         Curso: <input type="text" name="nombre" value="Js para DOM"><br><br>
         <input type="submit" value="Enviar">
     </form>
     <p id="test2"></p>
+    <!-- Eventos -->
+    <h4>La fecha de hoy es: </h4>
+    <p id="test3"></p>
+    <button id="btn">Presiona aqui</button>
+    <p id="test4"></p>
+    <div class="box" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+        Coloca el cursor encima 
+    </div>
     <!-- Aca incorporamos los archivos Js -->
     <script src="script.js"></script>
     <script src="dom.js"></script>
