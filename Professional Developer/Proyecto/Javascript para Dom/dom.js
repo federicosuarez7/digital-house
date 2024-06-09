@@ -47,3 +47,15 @@ const keydown = ($event)=>{
     const key = $event.key;
     console.log(key);
 }
+// Manipular nodos en el DOM
+// Creamos un parrafo
+const paragraph = document.createElement('p');
+// Creamos un nodo de texto
+const node = document.createTextNode("Este es contenido creado desde el DOM");
+// Incorporamos el elemento de texto al nodo de parrafo
+paragraph.appendChild(node);
+// En la variable container tenemos el div
+const container = document.getElementById('div1');
+const p1 = document.getElementById('p1');
+// Colocamos el nuevo contenido antes del p1
+container.insertBefore(paragraph,p1);
