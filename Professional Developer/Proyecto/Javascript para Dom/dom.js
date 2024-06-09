@@ -42,3 +42,8 @@ const mouseOut = (element) => {
     element.innerHTML = 'Estas fuera de la caja';
 
 }
+// Eventos de teclado
+const keydown = ($event)=>{
+    const key = $event.key;
+    console.log(key);
+}
