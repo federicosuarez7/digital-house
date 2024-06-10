@@ -59,3 +59,10 @@ const container = document.getElementById('div1');
 const p1 = document.getElementById('p1');
 // Colocamos el nuevo contenido antes del p1
 container.insertBefore(paragraph,p1);
+// Eliminamos un nodo
+// Primero seleccionamos el elemento a eliminar
+const p2 = document.getElementById('p2');
+p2.remove();
+// Reemplazamos un nodo
+const p3 = document.getElementById('p3');
+container.replaceChild(p5,p3);
