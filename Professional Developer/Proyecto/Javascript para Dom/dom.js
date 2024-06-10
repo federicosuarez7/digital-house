@@ -66,3 +66,12 @@ p2.remove();
 // Reemplazamos un nodo
 const p3 = document.getElementById('p3');
 container.replaceChild(p5,p3);
+// Creamos y eliminamos clases desde el DOM
+const addClass = ()=>{
+    const divClassList =document.getElementById('div13').classList;
+    divClassList.add('red-background');
+}
+const removeClass = ()=>{
+    const divClassList =document.getElementById('div13').classList.remove('red-background');
+}
+
