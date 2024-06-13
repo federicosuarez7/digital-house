@@ -74,4 +74,8 @@ const addClass = ()=>{
 const removeClass = ()=>{
     const divClassList =document.getElementById('div13').classList.remove('red-background');
 }
+// Creamos y eliminamos estilos desde el DOM
+const color =  document.getElementById('styles').style.color;
+const background = document.getElementById('styles').style.backgroundColor;
+
 
