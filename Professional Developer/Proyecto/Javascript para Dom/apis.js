@@ -1,3 +1,4 @@
+// Geolocalizacion browser web api
 const geolocation = document.getElementById('ubicacion');
 
 const showPosition = position =>{
@@ -11,4 +12,11 @@ const getLocation = () =>{
     }else{
         ubicacion.innerHTML = "La geolocalizacion esta desactivada";
     }
+}
+
+// Browser web apis: Form
+const doValidation = () => {
+    const number = document.getElementById('number');
+    document.getElementById('error').innerHTML = number.checkVisibility()
+    ? "El numero es correcto" : number.validationMessage;
 }

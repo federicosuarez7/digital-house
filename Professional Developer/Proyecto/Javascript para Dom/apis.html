@@ -7,10 +7,17 @@
 </head>
 <body>
     <h1>Browser web apis: Geolocalizacion</h1>
-
     <h4>Usted esta ubicado en: </h4>
     <p id="ubicacion"></p>
     <button onclick="getLocation()">Ver ubicacion</button>
+
+    <h2>Browser web apis: Forms</h2>
+    <input id="number" type="number" min="50" max="100" required>
+    <button onclick="doValidation()">¿Es correcto el numero?</button>
+    <p>Si el numero es menora 50 o mayor a 100,o nos olvidamos de ponerlo
+        el error del navegador sera:
+    </p>
+    <p id="error"></p>
 
 
 
