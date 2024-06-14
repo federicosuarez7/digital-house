@@ -78,4 +78,6 @@ const removeClass = ()=>{
 const color =  document.getElementById('styles').style.color;
 const background = document.getElementById('styles').style.backgroundColor;
 
+// Cookies
+document.cookie = 'userName = Federico Suarez';
 
