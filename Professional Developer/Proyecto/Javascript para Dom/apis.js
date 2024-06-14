@@ -22,8 +22,21 @@ const doValidation = () => {
 }
 
 // Browser web apis: History
-
 const goBackx2 = () => window.history.go(-2);
 const goBack = () => window.history.back(); 
 const goForwardx2 = () => window.history.go(2);
 const goForward = () => window.history.forward();
+
+// LocalStorage
+const firstname = document.getElementById('firstname');
+const lastname = document.getElementById('lastname');
+const job = document.getElementById('job');
+
+document.getElementById('welcome').innerHTML = localStorage.getItem('username') 
+== null ? '':'Bienvenido/a '+localStorage.getItem('username');
+
+
+const save = () => {
+    localStorage.setItem('username',firstname.value + ' '+ lastname.value);
+    localStorage.setItem('job',job.value);
+}
