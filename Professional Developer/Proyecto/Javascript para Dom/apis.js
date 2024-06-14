@@ -20,3 +20,10 @@ const doValidation = () => {
     document.getElementById('error').innerHTML = number.checkVisibility()
     ? "El numero es correcto" : number.validationMessage;
 }
+
+// Browser web apis: History
+
+const goBackx2 = () => window.history.go(-2);
+const goBack = () => window.history.back(); 
+const goForwardx2 = () => window.history.go(2);
+const goForward = () => window.history.forward();
