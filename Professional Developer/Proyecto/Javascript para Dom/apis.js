@@ -56,3 +56,6 @@ document.getElementById('welcome').innerHTML = sessionStorage.getItem('username'
         document.getElementById('welcome').innerHTML = sessionStorage.getItem('username') 
             == null ? '':'Bienvenido/a '+sessionStorage.getItem('username');
 }
+
+// Borrar almacenamiento
+const logout = () => localStorage.removeItem('username');
