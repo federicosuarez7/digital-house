@@ -40,3 +40,19 @@ const save = () => {
     localStorage.setItem('username',firstname.value + ' '+ lastname.value);
     localStorage.setItem('job',job.value);
 }
+
+// SessionStorage
+const firstname2 = document.getElementById('firstname');
+const lastname2 = document.getElementById('lastname');
+const job2 = document.getElementById('job');
+
+document.getElementById('welcome').innerHTML = sessionStorage.getItem('username') 
+    == null ? '':'Bienvenido/a '+sessionStorage.getItem('username');
+    
+    
+    const save2 = () => {
+        sessionStorage.setItem('username',firstname.value + ' '+ lastname.value);
+        sessionStorage.setItem('job',job.value);
+        document.getElementById('welcome').innerHTML = sessionStorage.getItem('username') 
+            == null ? '':'Bienvenido/a '+sessionStorage.getItem('username');
+}
