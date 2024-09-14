@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <form id="calculatorForm">
+        <input type="text" id="input1" placeholder="Ingrese el 1 numero"><br><br>
+        <input type="text" id="input2" placeholder="Ingrese el 2 numero"><br>
+        <br>
+        <button type="button" onclick="realizarOperacion('Sumar')">Sumar</button>
+        <button type="button" onclick="realizarOperacion('Restar')">Restar</button>
+        <button type="button" onclick="realizarOperacion('Multiplicar')">Multiplicar</button>
+        <button type="button" onclick="realizarOperacion('Dividir')">Dividir</button>
+    </form>
+    <p id="res"></p>
+    <script src="calculadora.js"></script>
+</body>
+</html>
