@@ -13,8 +13,11 @@
     <label for="edadInput">Edad</label>
     <input type="text" id="edadInput" placeholder="Ingrese su edad">
     <br><br>
-    <label for="invitadoInput">Nombre invitado</label>
-    <input type="text" id="invitadoInput" placeholder="Ingrese el nombre del invitado">
+    <label for="rolSelect">Rol:</label>
+    <select id="rolSelect">
+        <option value="Alumno">Alumno</option>
+        <option value="Profesor">Profesor</option>
+    </select>
     <br><br>
     <button onclick="saludar()">Saludar</button>
     <div id="res"></div>
